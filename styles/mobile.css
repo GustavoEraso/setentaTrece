@@ -63,6 +63,8 @@ header img {
 }
 
 main {
+    display: grid;
+    row-gap: 30px;
     width: 100%;
     height: auto;
     
@@ -97,7 +99,7 @@ main .title-container{
     padding:0 30px 30px;
 }
 
-.card{
+.card-1x1 {
     background-color: #383531;
     height: 80vw;
     max-height: 450px;
@@ -110,7 +112,9 @@ main .title-container{
     background-size: cover;
     background-repeat: no-repeat;
     display: grid;
-    place-items: end center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    place-items:  center start;
 }
 
 .promo-card-1{
@@ -118,6 +122,33 @@ main .title-container{
 }
 .promo-card-2{
     background-image: url(../assets/img/PROMO-PROPIA-BURGER-CUADRADA-450.jpg);
+}
+
+.card-1x1-title{
+ 
+    grid-area: 1 / 1 / 2 / 4;
+    font-size: 1.3rem;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: var(--boxSadow);
+    background:#1ea24e;
+    border-radius: 40px;
+    
+    
+    
+    
+}
+
+.card-1x1-price{
+    grid-area: 1 / 2 / 4 / 3;
+    font-size: 4rem;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: var(--boxSadow);
+    background:#1ea24e;
+    border-radius: 0 15px 0 15px;
 }
 
 .primary-button{
@@ -133,12 +164,16 @@ main .title-container{
     font-size: 2rem;
     font-weight: 700;
     padding: 5px;
-    box-shadow: var(--boxSadow);   
+    box-shadow: var(--boxSadow);
+    grid-area: 5 / 1/ 6 / 6;   
+    place-self: end center;
+    
 
 }
 
+
+
 .img-section{
-    margin-block-start: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,13 +209,82 @@ main .title-container{
     
 }
 
+.tortu-masVendido-card-1{
+    background-image: url(../assets/img/tortu-de-entera-con-fritas-450.jpg);
+}
+.tortu-masVendido-card-2{
+    background-image: url(../assets/img/tortu-de-picada-con-fritas-450.jpg);
+}
+.tortu-masVendido-card-3{
+    background-image: url(../assets/img/tortu-de-picada-sin-fritas-450.jpg);
+}
+
+.articles-card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-16x9{
+    width: 100vw;
+    height: 50vw;
+    display: flex; 
+    background:var(--white);
+    padding: 10px;
+    border-bottom: 1px solid var(--black) ;
+
+}
+
+.card-16x9-img-container{
+    width: 40%;
+    max-width: 200px;
+    display: flex;
+    place-items: center;
+    
+}
+
+.card-16x9-img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-16x9-description-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    
+    
+}
+
+.card-16x9-description{
+    font-size: 1.2rem;
+    color: var(--black);
+    
+}
+
+
+.card-16x9-title{
+    font-size: var(--size-description);
+    color: var(--black);
+    
+}
+
+
+.card-16x9-price{
+    font-size: 2rem;
+    color: var(--black);
+    display: inline-block;
+    text-align: end;
+}
 
 
 
 
 
-
-
+footer{
+    height: 100px;
+}
 
 
 
