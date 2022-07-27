@@ -20,7 +20,9 @@
 }
 
 html{
-    font-size: 62.5%;      
+    font-size: 62.5%; 
+    width: 100vw;   
+    overflow-x: hidden;
 }
 
 h1 {
@@ -40,6 +42,7 @@ a{
 }
 body{
     display: grid;
+    width: 100%;
     grid-template-rows: 300px 1fr;
     background-color: var(--black);
     box-shadow: var(--boxShadow-inset);
@@ -50,6 +53,7 @@ body{
 
 header{
     display: grid;
+    width: 100%;
     place-items: center;
     background: linear-gradient(140deg,#201E1C 10%, #F7931A 100%);
     border-radius: 0 0 15px 15px;
@@ -219,18 +223,21 @@ main .title-container{
     background-image: url(../assets/img/tortu-de-picada-sin-fritas-450.jpg);
 }
 
-.articles-card-container{
+.articles-cards-container{
+    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .card-16x9{
-    width: 100vw;
+    width: 100%;
     height: 50vw;
     display: flex; 
     background:var(--white);
     padding: 10px;
     border-bottom: 1px solid var(--black) ;
+    overflow: hidden ;
 
 }
 
@@ -258,9 +265,11 @@ main .title-container{
 }
 
 .card-16x9-description{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--black);
-    
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
 }
 
 
